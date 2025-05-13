@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // Pages
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Settings from './pages/Settings';
 
 // Import getIcon utility
 import getIcon from './utils/iconUtils';
@@ -78,6 +79,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home darkMode={darkMode} />} />
+        <Route path="/settings" element={<Settings darkMode={darkMode} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

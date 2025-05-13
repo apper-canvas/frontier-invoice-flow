@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; 
 import { toast } from 'react-toastify';
 import MainFeature from '../components/MainFeature';
 import getIcon from '../utils/iconUtils';
@@ -97,7 +97,7 @@ function Home({ darkMode }) {
             </button>
             
             <button 
-              onClick={() => setActiveTab('settings')}
+              onClick={() => window.location.href = '/settings'}
               className={`w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                 activeTab === 'settings' 
                   ? 'bg-primary/10 text-primary dark:bg-primary/20'
@@ -209,7 +209,7 @@ function Home({ darkMode }) {
             </button>
             
             <button 
-              onClick={() => {
+              onClick={() => window.location.href = '/settings'}
                 setActiveTab('settings');
                 setSidebarOpen(false);
               }}
