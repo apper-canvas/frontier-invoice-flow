@@ -74,6 +74,7 @@ function Home({ darkMode }) {
               Invoices
             </button>
             
+            <button 
               onClick={() => {
                 navigate('/clients');
                 setActiveTab('clients');
@@ -84,6 +85,8 @@ function Home({ darkMode }) {
                   : 'text-surface-700 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-700'
               }`}
             >
+              <Users className="mr-3 h-5 w-5" />
+              Clients
             </button>
             
             <button 
@@ -211,7 +214,6 @@ function Home({ darkMode }) {
               Reports
             </button>
             
-            <button 
               onClick={() => {
                 navigate('/settings');
                 window.location.href = '/settings';
