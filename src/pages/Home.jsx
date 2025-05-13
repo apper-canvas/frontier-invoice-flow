@@ -214,9 +214,9 @@ function Home({ darkMode }) {
               Reports
             </button>
             
+            <button
               onClick={() => {
                 navigate('/settings');
-                window.location.href = '/settings';
                 setActiveTab('settings');
                 setSidebarOpen(false);
               }}
