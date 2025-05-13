@@ -209,7 +209,8 @@ function Home({ darkMode }) {
             </button>
             
             <button 
-              onClick={() => window.location.href = '/settings'}
+              onClick={() => {
+                window.location.href = '/settings';
                 setActiveTab('settings');
                 setSidebarOpen(false);
               }}
