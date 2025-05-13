@@ -25,6 +25,8 @@ function App() {
   const LayoutDashboard = getIcon('LayoutDashboard');
   const FilePlus = getIcon('FilePlus');
 
+  const LogOut = getIcon('LogOut');
+  const X = getIcon('X');
   useEffect(() => {
     // Check local storage or system preference for dark mode
     const isDarkMode = localStorage.getItem('darkMode') === 'true' || 
