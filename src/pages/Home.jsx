@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'; 
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import MainFeature from '../components/MainFeature';
 import getIcon from '../utils/iconUtils';
@@ -14,6 +15,7 @@ function Home({ darkMode }) {
   const LogOut = getIcon('LogOut');
   const Menu = getIcon('Menu');
   const X = getIcon('X');
+  const navigate = useNavigate();
   
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('invoices');
@@ -72,7 +74,10 @@ function Home({ darkMode }) {
               Invoices
             </button>
             
-            <button 
+              onClick={() => {
+                navigate('/clients');
+                setActiveTab('clients');
+              }}
               onClick={() => setActiveTab('clients')}
               className={`w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                 activeTab === 'clients' 
@@ -181,7 +186,8 @@ function Home({ darkMode }) {
             <button 
               onClick={() => {
                 setActiveTab('clients');
-                setSidebarOpen(false);
+                navigate('/clients');
+                setSidebarOpen(false); 
               }}
               className={`w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                 activeTab === 'clients' 
@@ -209,7 +215,7 @@ function Home({ darkMode }) {
             </button>
             
             <button 
-              onClick={() => {
+                navigate('/settings');
                 window.location.href = '/settings';
                 setActiveTab('settings');
                 setSidebarOpen(false);
