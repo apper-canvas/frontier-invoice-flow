@@ -934,12 +934,8 @@ function Clients({ darkMode }) {
   );
 
   return (
-    <div className="flex-1 flex flex-col min-h-screen">
-      {/* Top navigation is rendered by the parent component */}
-      
-      <main className="flex-1 overflow-y-auto p-4 sm:p-6 bg-surface-50 dark:bg-surface-900">
-        {selectedClient ? renderClientDetails() : renderClientsList()}
-      </main>
+    <main className="p-4 sm:p-6 bg-surface-50 dark:bg-surface-900">
+      {selectedClient ? renderClientDetails() : renderClientsList()}
       
       {/* Modals */}
       {(showAddModal || showEditModal) && renderClientForm()}
